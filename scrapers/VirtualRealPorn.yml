@@ -7,6 +7,8 @@ sceneByURL:
       - virtualrealjapan.com/vr-japanese-video/
       - virtualrealpassion.com/vr-female-pov-porn-video/
       - virtualrealporn.com/vr-porn-video/
+      - virtualrealgay.com/vr-gay-porn-video/
+      - virtualrealtrans.com/vr-trans-porn-video
     scraper: sceneScraper
 
 sceneByFragment:
@@ -55,7 +57,8 @@ xPathScrapers:
               - regex: VR [\s\w]+? video$
                 with: ""
       Date: &dateAttr
-        selector: //div[@class="featured_data"]/text()[2]
+        selector: //div[@class="featured_data"]/text()
+        concat: " "
         postProcess:
           - replace:
               - regex: '.* (\w+ \d+, \d{4}).*'
@@ -157,4 +160,4 @@ xPathScrapers:
               }
               return value
       Image: //div[@class="feature_img_model"]/img/@src
-# Last Updated August 21, 2024
+# Last Updated April 29, 2025
